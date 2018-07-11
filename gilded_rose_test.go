@@ -2,7 +2,6 @@ package GildedRose
 
 import (
 	"testing"
-	"fmt"
 )
 
 func TestUpdatesNormalItemsBeforeSellDate(t *testing.T) {
@@ -326,6 +325,6 @@ func _TestUpdatesConjuredItemsAfterTheSellDateAtZeroQuality(t *testing.T) {
 
 func assertEquals(t *testing.T, actual int, expected int) {
 	if actual != expected {
-		t.Error(fmt.Sprintf("Expected %d to equal %d", actual, expected))
+		t.Errorf("Expected %d to equal %d", actual, expected)
 	}
 }
