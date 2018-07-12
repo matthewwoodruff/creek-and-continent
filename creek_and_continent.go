@@ -6,7 +6,25 @@ type CreekAndContinent struct {
 	SellIn int
 }
 
+func (g *CreekAndContinent) normalTick() {
+	g.SellIn -= 1
+	g.Price -= 1
+
+	if g.SellIn <= 0 {
+		g.Price -= 1
+	}
+
+	if g.Price < 0 {
+		g.Price = 0
+	}
+}
+
 func (g *CreekAndContinent) tick() {
+	if g.Name == "normal" {
+		g.normalTick()
+		return
+	}
+
 	if g.Name != "Japanese Denim" && g.Name != "Fashion Show Tickets" {
 		if g.Price > 0 {
 			if g.Name != "White Vest Top" {
@@ -53,4 +71,3 @@ func (g *CreekAndContinent) tick() {
 		}
 	}
 }
-
