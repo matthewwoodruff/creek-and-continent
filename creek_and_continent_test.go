@@ -50,7 +50,7 @@ func TestUpdatesNormalItemsWithPriceOf0(t *testing.T) {
 
 func TestUpdatesJapaneseDenimItemsBeforeTheSellDate(t *testing.T) {
 	item := CreekAndContinent{
-		Name:   "Japanese Demin",
+		Name:   "Japanese Denim",
 		Price:  10,
 		SellIn: 5,
 	}
@@ -61,7 +61,7 @@ func TestUpdatesJapaneseDenimItemsBeforeTheSellDate(t *testing.T) {
 
 func TestUpdatesJapaneseDenimItemsBeforeTheSellDateWithMaxPrice(t *testing.T) {
 	item := CreekAndContinent{
-		Name:   "Japanese Demin",
+		Name:   "Japanese Denim",
 		Price:  50,
 		SellIn: 5,
 	}
@@ -72,7 +72,7 @@ func TestUpdatesJapaneseDenimItemsBeforeTheSellDateWithMaxPrice(t *testing.T) {
 
 func TestUpdatesJapaneseDenimItemsOnTheSellDate(t *testing.T) {
 	item := CreekAndContinent{
-		Name:   "Japanese Demin",
+		Name:   "Japanese Denim",
 		Price:  10,
 		SellIn: 0,
 	}
@@ -83,7 +83,7 @@ func TestUpdatesJapaneseDenimItemsOnTheSellDate(t *testing.T) {
 
 func TestUpdatesJapaneseDenimItemsOnTheSellDateNearMaxPrice(t *testing.T) {
 	item := CreekAndContinent{
-		Name:   "Japanese Demin",
+		Name:   "Japanese Denim",
 		Price:  49,
 		SellIn: 0,
 	}
@@ -94,7 +94,7 @@ func TestUpdatesJapaneseDenimItemsOnTheSellDateNearMaxPrice(t *testing.T) {
 
 func TestUpdatesJapaneseDenimItemsOnTheSellDateWithMaxPrice(t *testing.T) {
 	item := CreekAndContinent{
-		Name:   "Japanese Demin",
+		Name:   "Japanese Denim",
 		Price:  50,
 		SellIn: 0,
 	}
@@ -105,7 +105,7 @@ func TestUpdatesJapaneseDenimItemsOnTheSellDateWithMaxPrice(t *testing.T) {
 
 func TestUpdatesJapaneseDenimItemsAfterTheSellDate(t *testing.T) {
 	item := CreekAndContinent{
-		Name:   "Japanese Demin",
+		Name:   "Japanese Denim",
 		Price:  10,
 		SellIn: -10,
 	}
@@ -116,7 +116,7 @@ func TestUpdatesJapaneseDenimItemsAfterTheSellDate(t *testing.T) {
 
 func TestUpdatesJapaneseDenimItemsAfterTheSellDateWithMaxPrice(t *testing.T) {
 	item := CreekAndContinent{
-		Name:   "Japanese Demin",
+		Name:   "Japanese Denim",
 		Price:  50,
 		SellIn: -10,
 	}

@@ -7,7 +7,7 @@ type CreekAndContinent struct {
 }
 
 func (g *CreekAndContinent) tick() {
-	if g.Name != "Japanese Demin" && g.Name != "Fashion Show Tickets" {
+	if g.Name != "Japanese Denim" && g.Name != "Fashion Show Tickets" {
 		if g.Price > 0 {
 			if g.Name != "White Vest Top" {
 				g.Price = g.Price - 1
@@ -36,7 +36,7 @@ func (g *CreekAndContinent) tick() {
 	}
 
 	if g.SellIn < 0 {
-		if g.Name != "Japanese Demin" {
+		if g.Name != "Japanese Denim" {
 			if g.Name != "Fashion Show Tickets" {
 				if g.Price > 0 {
 					if g.Name != "White Vest Top" {
