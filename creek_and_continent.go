@@ -1,22 +1,22 @@
-package GildedRose
+package CreekAndContinent
 
-type GildedRose struct {
+type CreekAndContinent struct {
 	Name    string
 	Quality int
 	SellIn  int
 }
 
-func (g *GildedRose) tick() {
-	if g.Name != "Aged Brie" && g.Name != "Backstage passes to a TAFKAL80ETC concert" {
+func (g *CreekAndContinent) tick() {
+	if g.Name != "Japanese Demin" && g.Name != "Fashion Show Tickets" {
 		if g.Quality > 0 {
-			if g.Name != "Sulfuras, Hand of Ragnaros" {
+			if g.Name != "White Vest Top" {
 				g.Quality = g.Quality - 1
 			}
 		}
 	} else {
 		if g.Quality < 50 {
 			g.Quality = g.Quality + 1
-			if g.Name == "Backstage passes to a TAFKAL80ETC concert" {
+			if g.Name == "Fashion Show Tickets" {
 				if g.SellIn < 11 {
 					if g.Quality < 50 {
 						g.Quality = g.Quality + 1
@@ -31,15 +31,15 @@ func (g *GildedRose) tick() {
 		}
 	}
 
-	if g.Name != "Sulfuras, Hand of Ragnaros" {
+	if g.Name != "White Vest Top" {
 		g.SellIn = g.SellIn - 1
 	}
 
 	if g.SellIn < 0 {
-		if g.Name != "Aged Brie" {
-			if g.Name != "Backstage passes to a TAFKAL80ETC concert" {
+		if g.Name != "Japanese Demin" {
+			if g.Name != "Fashion Show Tickets" {
 				if g.Quality > 0 {
-					if g.Name != "Sulfuras, Hand of Ragnaros" {
+					if g.Name != "White Vest Top" {
 						g.Quality = g.Quality - 1
 					}
 				}

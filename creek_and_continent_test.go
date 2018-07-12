@@ -1,11 +1,11 @@
-package GildedRose
+package CreekAndContinent
 
 import (
 	"testing"
 )
 
 func TestUpdatesNormalItemsBeforeSellDate(t *testing.T) {
-	item := GildedRose{
+	item := CreekAndContinent{
 		Name:    "normal",
 		Quality: 10,
 		SellIn:  5,
@@ -16,7 +16,7 @@ func TestUpdatesNormalItemsBeforeSellDate(t *testing.T) {
 }
 
 func TestUpdatesNormalItemsOnTheSellDate(t *testing.T) {
-	item := GildedRose{
+	item := CreekAndContinent{
 		Name:    "normal",
 		Quality: 10,
 		SellIn:  0,
@@ -27,7 +27,7 @@ func TestUpdatesNormalItemsOnTheSellDate(t *testing.T) {
 }
 
 func TestUpdatesNormalItemsAfterTheSellDate(t *testing.T) {
-	item := GildedRose{
+	item := CreekAndContinent{
 		Name:    "normal",
 		Quality: 10,
 		SellIn:  -5,
@@ -38,7 +38,7 @@ func TestUpdatesNormalItemsAfterTheSellDate(t *testing.T) {
 }
 
 func TestUpdatesNormalItemsWithQualityOf0(t *testing.T) {
-	item := GildedRose{
+	item := CreekAndContinent{
 		Name:    "normal",
 		Quality: 0,
 		SellIn:  5,
@@ -48,9 +48,9 @@ func TestUpdatesNormalItemsWithQualityOf0(t *testing.T) {
 	assertEquals(t, 4, item.SellIn)
 }
 
-func TestUpdatesBrieItemsBeforeTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Aged Brie",
+func TestUpdatesJapaneseDenimItemsBeforeTheSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Japanese Demin",
 		Quality: 10,
 		SellIn:  5,
 	}
@@ -59,9 +59,9 @@ func TestUpdatesBrieItemsBeforeTheSellDate(t *testing.T) {
 	assertEquals(t, 4, item.SellIn)
 }
 
-func TestUpdatesBrieItemsBeforeTheSellDateWithMaxQuality(t *testing.T) {
-	item := GildedRose{
-		Name:    "Aged Brie",
+func TestUpdatesJapaneseDenimItemsBeforeTheSellDateWithMaxQuality(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Japanese Demin",
 		Quality: 50,
 		SellIn:  5,
 	}
@@ -70,9 +70,9 @@ func TestUpdatesBrieItemsBeforeTheSellDateWithMaxQuality(t *testing.T) {
 	assertEquals(t, 4, item.SellIn)
 }
 
-func TestUpdatesBrieItemsOnTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Aged Brie",
+func TestUpdatesJapaneseDenimItemsOnTheSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Japanese Demin",
 		Quality: 10,
 		SellIn:  0,
 	}
@@ -81,9 +81,9 @@ func TestUpdatesBrieItemsOnTheSellDate(t *testing.T) {
 	assertEquals(t, -1, item.SellIn)
 }
 
-func TestUpdatesBrieItemsOnTheSellDateNearMaxQuality(t *testing.T) {
-	item := GildedRose{
-		Name:    "Aged Brie",
+func TestUpdatesJapaneseDenimItemsOnTheSellDateNearMaxQuality(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Japanese Demin",
 		Quality: 49,
 		SellIn:  0,
 	}
@@ -92,9 +92,9 @@ func TestUpdatesBrieItemsOnTheSellDateNearMaxQuality(t *testing.T) {
 	assertEquals(t, -1, item.SellIn)
 }
 
-func TestUpdatesBrieItemsOnTheSellDateWithMaxQuality(t *testing.T) {
-	item := GildedRose{
-		Name:    "Aged Brie",
+func TestUpdatesJapaneseDenimItemsOnTheSellDateWithMaxQuality(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Japanese Demin",
 		Quality: 50,
 		SellIn:  0,
 	}
@@ -103,9 +103,9 @@ func TestUpdatesBrieItemsOnTheSellDateWithMaxQuality(t *testing.T) {
 	assertEquals(t, -1, item.SellIn)
 }
 
-func TestUpdatesBrieItemsAfterTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Aged Brie",
+func TestUpdatesJapaneseDenimItemsAfterTheSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Japanese Demin",
 		Quality: 10,
 		SellIn:  -10,
 	}
@@ -114,9 +114,9 @@ func TestUpdatesBrieItemsAfterTheSellDate(t *testing.T) {
 	assertEquals(t, -11, item.SellIn)
 }
 
-func TestUpdatesBrieItemsAfterTheSellDateWithMaxQuality(t *testing.T) {
-	item := GildedRose{
-		Name:    "Aged Brie",
+func TestUpdatesJapaneseDenimItemsAfterTheSellDateWithMaxQuality(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Japanese Demin",
 		Quality: 50,
 		SellIn:  -10,
 	}
@@ -125,9 +125,9 @@ func TestUpdatesBrieItemsAfterTheSellDateWithMaxQuality(t *testing.T) {
 	assertEquals(t, -11, item.SellIn)
 }
 
-func TestUpdatesSulfurasItemsBeforeTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Sulfuras, Hand of Ragnaros",
+func TestUpdatesWhiteVestTopItemsBeforeTheSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "White Vest Top",
 		Quality: 10,
 		SellIn:  5,
 	}
@@ -136,9 +136,9 @@ func TestUpdatesSulfurasItemsBeforeTheSellDate(t *testing.T) {
 	assertEquals(t, 5, item.SellIn)
 }
 
-func TestUpdatesSulfurasItemsOnTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Sulfuras, Hand of Ragnaros",
+func TestUpdatesWhiteVestTopItemsOnTheSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "White Vest Top",
 		Quality: 10,
 		SellIn:  5,
 	}
@@ -147,9 +147,9 @@ func TestUpdatesSulfurasItemsOnTheSellDate(t *testing.T) {
 	assertEquals(t, 5, item.SellIn)
 }
 
-func TestUpdatesSulfurasItemsAfterTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Sulfuras, Hand of Ragnaros",
+func TestUpdatesWhiteVestTopItemsAfterTheSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "White Vest Top",
 		Quality: 10,
 		SellIn:  -1,
 	}
@@ -158,9 +158,9 @@ func TestUpdatesSulfurasItemsAfterTheSellDate(t *testing.T) {
 	assertEquals(t, -1, item.SellIn)
 }
 
-func TestUpdatesBackstagePassItemsBeforeTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Backstage passes to a TAFKAL80ETC concert",
+func TestUpdatesFashionShowTicketsItemsBeforeTheSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Fashion Show Tickets",
 		Quality: 10,
 		SellIn:  11,
 	}
@@ -169,9 +169,9 @@ func TestUpdatesBackstagePassItemsBeforeTheSellDate(t *testing.T) {
 	assertEquals(t, 10, item.SellIn)
 }
 
-func TestUpdatesBackstagePassItemsCloseToTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Backstage passes to a TAFKAL80ETC concert",
+func TestUpdatesFashionShowTicketsItemsCloseToTheSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Fashion Show Tickets",
 		Quality: 10,
 		SellIn:  10,
 	}
@@ -180,9 +180,9 @@ func TestUpdatesBackstagePassItemsCloseToTheSellDate(t *testing.T) {
 	assertEquals(t, 9, item.SellIn)
 }
 
-func TestUpdatesBackstagePassItemsBeforeTheSellDateAtMaxQuality(t *testing.T) {
-	item := GildedRose{
-		Name:    "Backstage passes to a TAFKAL80ETC concert",
+func TestUpdatesFashionShowTicketsItemsBeforeTheSellDateAtMaxQuality(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Fashion Show Tickets",
 		Quality: 50,
 		SellIn:  10,
 	}
@@ -191,9 +191,9 @@ func TestUpdatesBackstagePassItemsBeforeTheSellDateAtMaxQuality(t *testing.T) {
 	assertEquals(t, 9, item.SellIn)
 }
 
-func TestUpdatesBackstagePassItemsVeryCloseToTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Backstage passes to a TAFKAL80ETC concert",
+func TestUpdatesFashionShowTicketsItemsVeryCloseToTheSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Fashion Show Tickets",
 		Quality: 10,
 		SellIn:  5,
 	}
@@ -202,9 +202,9 @@ func TestUpdatesBackstagePassItemsVeryCloseToTheSellDate(t *testing.T) {
 	assertEquals(t, 4, item.SellIn)
 }
 
-func TestUpdatesBackstagePassItemsVeryCloseToTheSellDateAtMaxQuality(t *testing.T) {
-	item := GildedRose{
-		Name:    "Backstage passes to a TAFKAL80ETC concert",
+func TestUpdatesFashionShowTicketsItemsVeryCloseToTheSellDateAtMaxQuality(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Fashion Show Tickets",
 		Quality: 50,
 		SellIn:  5,
 	}
@@ -213,9 +213,9 @@ func TestUpdatesBackstagePassItemsVeryCloseToTheSellDateAtMaxQuality(t *testing.
 	assertEquals(t, 4, item.SellIn)
 }
 
-func TestUpdatesBackstagePassItemsWithOneDayLeftToSell(t *testing.T) {
-	item := GildedRose{
-		Name:    "Backstage passes to a TAFKAL80ETC concert",
+func TestUpdatesFashionShowTicketsItemsWithOneDayLeftToSell(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Fashion Show Tickets",
 		Quality: 10,
 		SellIn:  1,
 	}
@@ -224,9 +224,9 @@ func TestUpdatesBackstagePassItemsWithOneDayLeftToSell(t *testing.T) {
 	assertEquals(t, 0, item.SellIn)
 }
 
-func TestUpdatesBackstagePassItemsWithOneDayLeftToSellAtMaxQuality(t *testing.T) {
-	item := GildedRose{
-		Name:    "Backstage passes to a TAFKAL80ETC concert",
+func TestUpdatesFashionShowTicketsItemsWithOneDayLeftToSellAtMaxQuality(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Fashion Show Tickets",
 		Quality: 50,
 		SellIn:  1,
 	}
@@ -235,9 +235,9 @@ func TestUpdatesBackstagePassItemsWithOneDayLeftToSellAtMaxQuality(t *testing.T)
 	assertEquals(t, 0, item.SellIn)
 }
 
-func TestUpdatesBackstagePassItemsOnSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Backstage passes to a TAFKAL80ETC concert",
+func TestUpdatesFashionShowTicketsItemsOnSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Fashion Show Tickets",
 		Quality: 10,
 		SellIn:  0,
 	}
@@ -246,9 +246,9 @@ func TestUpdatesBackstagePassItemsOnSellDate(t *testing.T) {
 	assertEquals(t, -1, item.SellIn)
 }
 
-func TestUpdatesBackstagePassItemsAfterTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Backstage passes to a TAFKAL80ETC concert",
+func TestUpdatesFashionShowTicketsItemsAfterTheSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Fashion Show Tickets",
 		Quality: 10,
 		SellIn:  -1,
 	}
@@ -258,8 +258,8 @@ func TestUpdatesBackstagePassItemsAfterTheSellDate(t *testing.T) {
 }
 
 func _TestUpdatesConjuredItemsBeforeTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Conjured Mana Cake",
+	item := CreekAndContinent{
+		Name:    "Homeware Hand Towel",
 		Quality: 10,
 		SellIn:  10,
 	}
@@ -268,9 +268,9 @@ func _TestUpdatesConjuredItemsBeforeTheSellDate(t *testing.T) {
 	assertEquals(t, 9, item.SellIn)
 }
 
-func _TestUpdatesConjuredItemsAtZeroQuality(t *testing.T) {
-	item := GildedRose{
-		Name:    "Conjured Mana Cake",
+func _TestUpdatesHomewareHandTowelItemsAtZeroQuality(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Homeware Hand Towel",
 		Quality: 0,
 		SellIn:  10,
 	}
@@ -279,9 +279,9 @@ func _TestUpdatesConjuredItemsAtZeroQuality(t *testing.T) {
 	assertEquals(t, 9, item.SellIn)
 }
 
-func _TestUpdatesConjuredItemsOnTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Conjured Mana Cake",
+func _TestUpdatesHomewareHandTowelItemsOnTheSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Homeware Hand Towel",
 		Quality: 10,
 		SellIn:  0,
 	}
@@ -290,9 +290,9 @@ func _TestUpdatesConjuredItemsOnTheSellDate(t *testing.T) {
 	assertEquals(t, -1, item.SellIn)
 }
 
-func _TestUpdatesConjuredItemsBeforeTheSellDateAtZeroQuality(t *testing.T) {
-	item := GildedRose{
-		Name:    "Conjured Mana Cake",
+func _TestUpdatesHomewareHandTowelItemsBeforeTheSellDateAtZeroQuality(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Homeware Hand Towel",
 		Quality: 0,
 		SellIn:  0,
 	}
@@ -301,9 +301,9 @@ func _TestUpdatesConjuredItemsBeforeTheSellDateAtZeroQuality(t *testing.T) {
 	assertEquals(t, -1, item.SellIn)
 }
 
-func _TestUpdatesConjuredItemsAfterTheSellDate(t *testing.T) {
-	item := GildedRose{
-		Name:    "Conjured Mana Cake",
+func _TestUpdatesHomewareHandTowelItemsAfterTheSellDate(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Homeware Hand Towel",
 		Quality: 10,
 		SellIn:  -10,
 	}
@@ -312,9 +312,9 @@ func _TestUpdatesConjuredItemsAfterTheSellDate(t *testing.T) {
 	assertEquals(t, -11, item.SellIn)
 }
 
-func _TestUpdatesConjuredItemsAfterTheSellDateAtZeroQuality(t *testing.T) {
-	item := GildedRose{
-		Name:    "Conjured Mana Cake",
+func _TestUpdatesHomewareHandTowelItemsAfterTheSellDateAtZeroQuality(t *testing.T) {
+	item := CreekAndContinent{
+		Name:    "Homeware Hand Towel",
 		Quality: 0,
 		SellIn:  10,
 	}
